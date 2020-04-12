@@ -7,6 +7,18 @@ section {
   padding: 0;
   margin: 0;
 }
+
+.page:after {
+  content: '';
+  width: 100%;
+  height: 80%;
+  background: #FEF6E7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 .first-screen {
   padding: 0 var(--padding-side);
   padding-top: 1em;
@@ -24,6 +36,7 @@ section {
   background-color: var(--color-background-secondary);
   z-index: -1;
 }
+
 .first-screen::after {
   content: '';
   position: absolute;
@@ -57,17 +70,38 @@ section {
   text-align: center;
 }
 
+.note {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 1em 0em 2em 0em;
+  border-top: 1px dashed var(--color-bg-ghost);
+}
+
 @media (min-width: 1200px) {
   .second-screen {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    margin-top: 80px;
     text-align: left;
+  }
+
+  .second-screen__cell {
+    padding-right: 36px;
   }
 
   .third-screen {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    margin-top: 80px;
     text-align: left;
+  }
+
+  .third-screen__cell{
+    padding-right: 36px;
   }
 
   .third-screen__cell:nth-child(1) {
